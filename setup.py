@@ -223,7 +223,7 @@ setup(name='hyclops',
           ('/var/run/hyclops', []),
           ('/opt/hyclops/cron_scripts', [os.path.join(pwd, 'misc/cron_scripts/delete_not_exist_hosts.py')])
       ],
-      install_requires=['apache_libcloud >=0.12.1', 'zabbix_api', 'pyzmq', 'psphere', 'configobj', 'python_daemon==1.6'],
+      install_requires=['apache_libcloud >=0.12.1', 'zabbix_api', 'pyzmq', 'psphere', 'configobj', 'python_daemon==1.6', 'pbr'],
       cmdclass={'replace': ReplaceCommand, 'rollback': RollbackCommand, 'import': ImportCommand})
 # hyclops user add
 if os.system('/usr/bin/id hyclops') != 0:
